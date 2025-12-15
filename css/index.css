@@ -69,7 +69,7 @@ h1 {
 #background {
     width: 100vw;
     height: 100vh;
-    opacity: 15%;
+    opacity: 30%;
     object-fit: cover;
     position: fixed;
     left: 0;

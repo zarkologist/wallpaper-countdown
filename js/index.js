@@ -1,5 +1,5 @@
 const countdownDates = [
-    { id: "countdown1", date: new Date("Aug 20, 2025 00:00:00").getTime() },
+    { id: "countdown1", date: new Date("Jan 12, 2026 00:00:00").getTime() },
 ];
 
 function calculateTime(distance) {
@@ -21,13 +21,7 @@ function updateClock() {
             element.innerHTML = "It's Over.";
         } else {
             const { days, hours, minutes, seconds } = calculateTime(distance);
-
-            // Display days only for smaller countdowns
-            if (id === "countdown1") {
-                element.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-            } else {
-                element.innerHTML = `${days}d`;
-            }
+            element.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
         }
     });
 }
