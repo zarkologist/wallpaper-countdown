@@ -1,6 +1,6 @@
-const countdownDates = [
-    { id: "countdown1", date: new Date("Jan 12, 2026 00:00:00").getTime() },
-];
+const countdown = { date: new Date("Feb 2, 2026 00:00:00").getTime(), title: "DELTARUNE VIDEO SCRIPT" }
+const element = document.getElementById("countdown");
+const title = document.getElementById("title");
 
 function calculateTime(distance) {
     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -12,19 +12,15 @@ function calculateTime(distance) {
 
 function updateClock() {
     const now = new Date().getTime();
-
-    countdownDates.forEach(({ id, date }) => {
-        const distance = date - now;
-        const element = document.getElementById(id);
-
-        if (distance < 0) {
-            element.innerHTML = "It's Over.";
-        } else {
-            const { days, hours, minutes, seconds } = calculateTime(distance);
-            element.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-        }
-    });
+    const distance = countdown.date - now;
+    if (distance < 0) {
+        element.innerHTML = "It's Over.";
+    } else {
+        const { days, hours, minutes, seconds } = calculateTime(distance);
+        element.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
 }
 
+title.innerHTML = countdown.title;
 updateClock();
 setInterval(updateClock, 1000);
