@@ -1,4 +1,4 @@
-const countdown = { date: new Date("Feb 2, 2026 00:00:00").getTime(), title: "DELTARUNE VIDEO SCRIPT" }
+const countdown = { date: new Date("Jan 1, 2030 00:00:00").getTime(), title: "CHANGE ME VIA INDEX.JS" }
 const element = document.getElementById("countdown");
 const title = document.getElementById("title");
 
