@@ -1,4 +1,4 @@
-const countdown = { date: new Date("May 5, 2026 00:00:00").getTime(), title: "SEMESTER END" }
+const countdown = { date: new Date("Aug 19, 2026 00:00:00").getTime(), title: "SEMESTER BEGIN" }
 const element = document.getElementById("countdown");
 const title = document.getElementById("title");
 
